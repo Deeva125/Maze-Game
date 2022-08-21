@@ -1,0 +1,44 @@
+.level{
+    background-color: rgb(255, 241, 159);
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 5vh;
+    border: solid black 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bar{
+width: 19%;
+height: 95%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.obstacle{
+    width: 95%;
+    height: 100%;
+}
+
+.seperator{
+    width: 5%;
+    height: 100%;
+    background-color: black;
+}
+
+*-------------------------First Obstacle------------------------*
+
+.holder{
+    background-color: blueviolet;
+    height: 50px;
+    margin-top: 150px;
+}
+
+.slider{
+    height: 20px;
+    width: 50px;
+    background-color: rgb(247, 68, 68);
+}
