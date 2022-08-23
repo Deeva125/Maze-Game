@@ -66,3 +66,46 @@
         margin-left: 2px;
     }
 }
+
+.circle{
+    height: 65px;
+    width: 65px;
+    border-radius: 100px;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.slider2{
+    height: 30px;
+    width: 50px;
+    background-color: rgb(247, 68, 68);
+    margin-top: 40px;
+    animation-name: slider2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slider2{
+    0%{
+        margin-left: 2px;
+        width: 50px;
+    }
+
+    25%{
+        width: 70px;
+    }
+
+    50%{
+        margin-left: 13vw;  
+        width: 50px; 
+    }
+
+    75%{
+        width: 70px;
+    }
+
+    100%{
+        margin-left: 2px;
+        width: 50px;
+    }
+}
