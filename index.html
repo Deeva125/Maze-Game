@@ -10,32 +10,44 @@
 </head>
 
 <body>
-    <div class="level">
+    <div class="level" id="level">
         <div class="obstacle">
+            <div class="start d-flex justify-center align-items-center">
+                <button onclick="activate()">Start</button>
+            </div>
+
             <div class="holder">
                 <div class="slider"></div>
             </div>
-            <div class="holder flex justify-between">
+            <div class="holder d-flex justify-between">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
             </div>
-            
+
             <div class="holder">
                 <div class="slider2"></div>
             </div>
 
             <div class="holder">
-
-            </div>
-
-            <div class="holder">
-
+                <img id="thunderGIF" height="120px" width="100%"
+                    src="https://c.tenor.com/2xP4apxzvSkAAAAM/weather-lightning.gif" alt="">
             </div>
         </div>
         <div onmouseover="lose()" class="seperator"></div>
 
-        <div class="obstacle"></div>
+        <div class="obstacle">
+            <div class="holder">
+                <img width="100%" id="fireGIF" src="https://c.tenor.com/VbezPY1TRaMAAAAM/fire-flames.gif" alt="">
+            </div>
+            <div class="holder"></div>
+            <div class="holder">
+                <img onmouseover="lose()"  class="mazeimg" width="100%" src="maze.svg" alt="">
+            </div>
+            <div class="holder"></div>
+            <div class="holder"></div>
+
+        </div>
         <div onmouseover="lose()" class="seperator"></div>
 
         <div class="obstacle"></div>
@@ -48,9 +60,37 @@
     </div>
 
     <script>
-      //  function lose(){
-      //      document.write("Game Over!")
-      // }
+        let lightning = true;
+        let start=false
+
+        function thunder() {
+            console.log("hello")
+            if(lightning==true){
+                document.getElementById("thunderGIF").style.display="none";
+                lightning=false;
+            }
+            else{
+                document.getElementById("thunderGIF").style.display="block";
+                lightning=true;   
+            }
+            
+            }
+        
+        setInterval(
+            thunder
+            , 1500
+        )
+
+        function activate(){
+            start=true;
+            document.getElementById("level").style.borderColor="red"
+        }
+
+        function lose(){
+            if(start==true){
+            document.write("Game Over!") 
+            }
+        }
     </script>
 </body>
 

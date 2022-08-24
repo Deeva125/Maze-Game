@@ -1,4 +1,9 @@
-.flex{
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-flex{
     display: flex;
 }
 
@@ -8,6 +13,10 @@
 
 .justify-between{
     justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
 }
 
 .level{
@@ -35,12 +44,25 @@
 
 /* *-------------------------First Obstacle------------------------* */
 
+.start{
+    height: 18%;
+    width: 98%;
+    margin-top: 5px;
+}
+
 .holder{
-    background-color: blueviolet;
     width: 98%;
     height: 17%;
-    border: solid;
+    border: solid rgb(255, 241, 159);
     margin-top: 3%;
+}
+
+button{
+    height: 30%;
+    width: 40%;
+    border-radius: 5px;
+    background-color: rgb(255, 58, 97);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .slider{
@@ -107,5 +129,29 @@
     100%{
         margin-left: 2px;
         width: 50px;
+    }
+}
+
+#fireGIF{
+    animation-name: fire;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fire {
+    0%{
+        width: 100%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 100%;
+    }
+    75%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
     }
 }
