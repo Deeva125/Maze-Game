@@ -3,8 +3,20 @@
     padding: 0px;
 }
 
+.bg-danger{
+    background-color: red;
+}
+
+.bg-primary{
+    background-color: blue;
+}
+
 .d-flex{
     display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
 }
 
 .justify-center{
@@ -81,7 +93,7 @@ button{
     }
 
     50%{
-        margin-left: 13vw;   
+        margin-left: 11vw;   
     }
 
     100%{
@@ -114,11 +126,11 @@ button{
     }
 
     25%{
-        width: 70px;
+        width: 6px;
     }
 
     50%{
-        margin-left: 13vw;  
+        margin-left: 10vw;  
         width: 50px; 
     }
 
@@ -134,8 +146,25 @@ button{
 
 #fireGIF{
     animation-name: fire;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
+    height: 25vh;
+}
+
+#fireGIF2{
+    animation-name: fire;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin: auto;
+    height: 25vh;
+}
+
+#fireGIF3{ 
+    animation-name: fire;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    height: 25vh;
+    float: right;
 }
 
 @keyframes fire {
@@ -157,5 +186,105 @@ button{
 }
 
 .tornado{
-    height: 50vh;
+    height: 25vh;
+    animation-name: tornado-movement;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tornado-movement {
+    0%{
+        margin-top: 5vh;
+        margin-left: 0vw;
+    }
+
+    25%{
+        margin-top: 25vh;
+        margin-left: 5vw;
+        height: 25vh;
+    }
+
+    50%{
+        margin-top: 75vh;
+        margin-left: 0vw;
+        height: 15vh;
+    }
+
+    75%{
+        margin-top: 75vh;
+        margin-left: 10vw;
+        height: 15vh;
+    }
+
+    100%{
+        margin-top: 5vh;
+        margin-left: 0vw;
+    }
+}
+
+.tornado-holder{
+    height: 100%;
+}
+
+.laser-holder{
+    height: 5vh;
+}
+
+.laser{
+    margin-top: 10vh;
+}
+
+.laser1{
+    height: 1vh;
+    width: 95%;
+    background-color: red;
+    border: red;
+    transform: rotate(30deg);
+    animation-name: laseractivate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes laseractivate{
+    0%{
+        display: inline-block;
+    }
+    50%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+
+
+.laser2{
+    height: 1vh;
+    width: 95%;
+    background-color: red;
+    border: red;
+    transform: rotate(15deg);
+}
+
+.laser3{
+    height: 1vh;
+    width: 95%;
+    background-color: red;
+    border: red;
+    transform: rotate(28deg);
+}
+
+.laser4{
+    height: 1vh;
+    width: 95%;
+    background-color: red;
+    border: red;
+    transform: rotate(112deg);
+}
+
+.finish-holder{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

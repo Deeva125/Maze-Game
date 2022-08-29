@@ -17,81 +17,109 @@
             </div>
 
             <div class="holder">
-                <div class="slider"></div>
+                <div onmouseover="lose()" class="slider"></div>
             </div>
             <div class="holder d-flex justify-between">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+                <div onmouseover="lose()" class="circle"></div>
+                <div onmouseover="lose()" class="circle"></div>
+                <div onmouseover="lose()" class="circle"></div>
             </div>
 
             <div class="holder">
-                <div class="slider2"></div>
+                <div onmouseover="lose()" class="slider2"></div>
             </div>
 
             <div class="holder">
-                <img id="thunderGIF" height="120px" width="100%"
+                <img onmouseover="lose()" id="thunderGIF" height="120px" width="100%"
                     src="https://c.tenor.com/2xP4apxzvSkAAAAM/weather-lightning.gif" alt="">
             </div>
         </div>
         <div onmouseover="lose()" class="seperator"></div>
 
-        <div class="obstacle">
+        <div class="obstacle d-flex wrap">
             <div class="holder">
-                <img width="100%" id="fireGIF" src="https://c.tenor.com/VbezPY1TRaMAAAAM/fire-flames.gif" alt="">
+                <img onmouseover="lose()" height="100%" width="100%" id="fireGIF"
+                    src="https://c.tenor.com/VbezPY1TRaMAAAAM/fire-flames.gif" alt="">
             </div>
-            <div class="holder"></div>
+
+            <div class="holder" id="fireGIF2">
+                <img onmouseover="lose()" height="100%" width="100%"
+                    src="https://c.tenor.com/VbezPY1TRaMAAAAM/fire-flames.gif" alt="">
+            </div>
+
             <div class="holder">
-                <img onmouseover="lose()"  class="mazeimg" width="100%" src="maze.svg" alt="">
+                <img onmouseover="lose()" height="100%" width="100%" id="fireGIF3"
+                    src="https://c.tenor.com/VbezPY1TRaMAAAAM/fire-flames.gif" alt="">
             </div>
 
         </div>
         <div onmouseover="lose()" class="seperator"></div>
 
         <div class="obstacle">
-            <div class="obstacle">
-                <img class="tornado" src="https://acegif.com/wp-content/uploads/2022/fzk5d/28-rotating-tornado.gif" alt="">
+            <div class="tornado-holder">
+                <img onmouseover="lose()" class="tornado"
+                    src="https://acegif.com/wp-content/uploads/2022/fzk5d/28-rotating-tornado.gif" alt="">
             </div>
         </div>
+
         <div onmouseover="lose()" class="seperator"></div>
 
-        <div class="obstacle"></div>
-        <div onmouseover="lose()" class="seperator"></div>
-
-        <div class="obstacle"></div>
+        <div class="obstacle">
+            <div class="finish-holder bg-primary">
+                <button onclick="win()">FINISH</button>
+            </div>
+            <div class="laser-holder">
+                <div onmouseover="lose()" class="laser laser1"></div>
+            </div>
+            <div class="laser-holder">
+                <div onmouseover="lose()" class="laser laser2"></div>
+            </div>
+            <div class="laser-holder">
+                <div onmouseover="lose()" class="laser laser3"></div>
+            </div>
+            <div class="laser-holder">
+                <div  onmouseover="lose()" class="laser laser4"></div>
+            </div>
+        </div>
     </div>
+    <div onmouseover="lose()" class="seperator"></div>
+
 
     <script>
         let lightning = true;
-        let start=false
+        let start = false
 
         function thunder() {
             console.log("hello")
-            if(lightning==true){
-                document.getElementById("thunderGIF").style.display="none";
-                lightning=false;
+            if (lightning == true) {
+                document.getElementById("thunderGIF").style.display = "none";
+                lightning = false;
             }
-            else{
-                document.getElementById("thunderGIF").style.display="block";
-                lightning=true;   
+            else {
+                document.getElementById("thunderGIF").style.display = "block";
+                lightning = true;
             }
-            
-            }
-        
+
+        }
+
         setInterval(
             thunder
             , 1500
         )
 
-        function activate(){
-            start=true;
-            document.getElementById("level").style.borderColor="red"
+        function activate() {
+            start = true;
+            document.getElementById("level").style.borderColor = "red"
         }
 
-        function lose(){
-            if(start==true){
-            document.write("Game Over!") 
+        function lose() {
+            if (start == true) {
+                document.write("Game Over!")
             }
+        }
+
+        function win(){
+            document.write("You Win!")
         }
     </script>
 </body>
