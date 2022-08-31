@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 100%;   
+}
+
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://c.tenor.com/pz0zpQXlK5sAAAAi/sparkle-confetti.gif");
+background-size: cover;
+    flex-wrap: wrap;
+}
+
+.box{
+    text-align: center; 
+    width: 100%;
+}
+
+button{
+
+}

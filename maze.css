@@ -33,14 +33,22 @@
 
 .level{
     background-color: rgb(255, 241, 159);
-    width: 90%;
+    width: 100%;
     height: 90vh;
     margin: auto;
-    margin-top: 5vh;
-    border: solid black 10px;
+    border: solid black 2px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.border{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    width: 100%;
+    height: 7vh;
+    margin: auto;
 }
 
 .obstacle{
@@ -50,8 +58,16 @@
 
 .seperator{
     width: 5%;
-    height: 98%;
+    height: 96%;
     background-color: black;
+}
+
+.up{
+    margin-bottom: 4vh;
+}
+
+.down{
+    margin-top: 4vh;
 }
 
 /* *-------------------------First Obstacle------------------------* */
